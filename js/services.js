@@ -17,7 +17,7 @@ angular.module('app.services', [])
 .factory('SurahListService', ['$http', "$q", function($http, $q){
 	var deferred = $q.defer();
 
-	$http.get('/js/res/surah_list.json').then(function(res){
+	$http.get('js/res/surah_list.json').then(function(res){
 		deferred.resolve(res.data);
 	});
 
@@ -129,7 +129,7 @@ angular.module('app.services', [])
 
 	loadSurah = function(surahId){
 		var deferred = $q.defer(), 
-			url = "/js/res/surahs/" + surahId + ".json";
+			url = "js/res/surahs/" + surahId + ".json";
 
 		//if we have a cache do not load it from url
 		if(surahs[surahId]){

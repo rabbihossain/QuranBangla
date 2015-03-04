@@ -15,8 +15,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 })
 
 .config(['$compileProvider', function($compileProvider) {
-		$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|app):/);
-		$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|app):/);
+		$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|app|file):/);
+		$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|app|file):/);
 	}
 ])
 
